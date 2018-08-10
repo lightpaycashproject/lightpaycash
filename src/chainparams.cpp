@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The LightPayCoin developers
+// Copyright (c) 2018 The LightPayCash developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -97,15 +97,15 @@ public:
         pchMessageStart[3] = 0x5a;
         vAlertPubKey = ParseHex("040d75796902e3eda97815d744328237872309a95b42a74b22d7580e56b086fbc19ae1d6ef30c9e27d060c9c48692a663b9a321161e19f853ca6a6499cba7d17f6");
         nDefaultPort = 39797;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // LightPayCoin starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 20; // LightPayCash starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // LightPayCoin: 1 day
-        nTargetSpacing = 1 * 60;  // LightPayCoin: 1 minute
+        nTargetTimespan = 1 * 60; // LightPayCash: 1 day
+        nTargetSpacing = 1 * 60;  // LightPayCash: 1 minute
         nLastPOWBlock = 90;
         nMaturity = 50;
         nMasternodeCountDrift = 20;
@@ -199,8 +199,8 @@ public:
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // LightPayCoin: 1 day
-        nTargetSpacing = 1 * 60;  // LightPayCoin: 1 minute
+        nTargetTimespan = 1 * 60; // LightPayCash: 1 day
+        nTargetSpacing = 1 * 60;  // LightPayCash: 1 minute
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
@@ -221,14 +221,14 @@ public:
         vSeeds.push_back(CDNSSeedData("80.211.202.181", "80.211.202.181"));         // Single node address
         vSeeds.push_back(CDNSSeedData("94.177.187.54", "94.177.187.54"));           // Single node address
 */
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet lightpaycoin addresses start with 'x' or 'y'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet lightpaycoin script addresses start with '8' or '9'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet lightpaycash addresses start with 'x' or 'y'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet lightpaycash script addresses start with '8' or '9'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        // Testnet lightpaycoin BIP32 pubkeys start with 'DRKV'
+        // Testnet lightpaycash BIP32 pubkeys start with 'DRKV'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
-        // Testnet lightpaycoin BIP32 prvkeys start with 'DRKP'
+        // Testnet lightpaycash BIP32 prvkeys start with 'DRKP'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
-        // Testnet lightpaycoin BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet lightpaycash BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
@@ -274,8 +274,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // LightPayCoin: 1 day
-        nTargetSpacing = 1 * 60;        // LightPayCoin: 1 minutes
+        nTargetTimespan = 24 * 60 * 60; // LightPayCash: 1 day
+        nTargetSpacing = 1 * 60;        // LightPayCash: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1524873600;
         genesis.nBits = 0x207fffff;

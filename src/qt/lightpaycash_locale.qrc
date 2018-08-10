@@ -1,0 +1,28 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/lightpaycash_bg.qm</file>
+        <file alias="ca">locale/lightpaycash_ca.qm</file>
+        <file alias="cs">locale/lightpaycash_cs.qm</file>
+        <file alias="da">locale/lightpaycash_da.qm</file>
+        <file alias="de">locale/lightpaycash_de.qm</file>
+        <file alias="en">locale/lightpaycash_en.qm</file>
+        <file alias="en_US">locale/lightpaycash_en_US.qm</file>
+        <file alias="es">locale/lightpaycash_es.qm</file>
+        <file alias="fi">locale/lightpaycash_fi.qm</file>
+        <file alias="fr_FR">locale/lightpaycash_fr_FR.qm</file>
+        <file alias="it">locale/lightpaycash_it.qm</file>
+        <file alias="ja">locale/lightpaycash_ja.qm</file>
+        <file alias="ko_KR">locale/lightpaycash_ko_KR.qm</file>
+        <file alias="nl">locale/lightpaycash_nl.qm</file>
+        <file alias="pl">locale/lightpaycash_pl.qm</file>
+        <file alias="pt">locale/lightpaycash_pt.qm</file>
+        <file alias="pt_BR">locale/lightpaycash_pt_BR.qm</file>
+        <file alias="ro_RO">locale/lightpaycash_ro_RO.qm</file>
+        <file alias="ru">locale/lightpaycash_ru.qm</file>
+        <file alias="sk">locale/lightpaycash_sk.qm</file>
+        <file alias="sv">locale/lightpaycash_sv.qm</file>
+        <file alias="uk">locale/lightpaycash_uk.qm</file>
+        <file alias="zh_CN">locale/lightpaycash_zh_CN.qm</file>
+        <file alias="zh_TW">locale/lightpaycash_zh_TW.qm</file>
+    </qresource>
+</RCC>

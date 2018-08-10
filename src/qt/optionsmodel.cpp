@@ -1,12 +1,12 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The LightPayCoin developers
+// Copyright (c) 2018 The LightPayCash developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/lightpaycoin-config.h"
+#include "config/lightpaycash-config.h"
 #endif
 
 #include "optionsmodel.h"
@@ -76,11 +76,11 @@ void OptionsModel::Init()
     if (!settings.contains("nObfuscationRounds"))
         settings.setValue("nObfuscationRounds", 2);
 
-    if (!settings.contains("nAnonymizeLightpaycoinAmount"))
-        settings.setValue("nAnonymizeLightpaycoinAmount", 1000);
+    if (!settings.contains("nAnonymizeLightPayCashAmount"))
+        settings.setValue("nAnonymizeLightPayCashAmount", 1000);
 
     nObfuscationRounds = settings.value("nObfuscationRounds").toLongLong();
-    nAnonymizeLightpaycoinAmount = settings.value("nAnonymizeLightpaycoinAmount").toLongLong();
+    nAnonymizeLightPayCashAmount = settings.value("nAnonymizeLightPayCashAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -147,8 +147,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nObfuscationRounds"))
         SoftSetArg("-obfuscationrounds", settings.value("nObfuscationRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeLightpaycoinAmount"))
-        SoftSetArg("-anonymizelightpaycoinamount", settings.value("nAnonymizeLightpaycoinAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeLightPayCashAmount"))
+        SoftSetArg("-anonymizelightpaycashamount", settings.value("nAnonymizeLightPayCashAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -159,7 +159,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in lightpaycoin.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in lightpaycash.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())
@@ -228,8 +228,8 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nThreadsScriptVerif");
         case ObfuscationRounds:
             return QVariant(nObfuscationRounds);
-        case AnonymizeLightpaycoinAmount:
-            return QVariant(nAnonymizeLightpaycoinAmount);
+        case AnonymizeLightPayCashAmount:
+            return QVariant(nAnonymizeLightPayCashAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -338,10 +338,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             settings.setValue("nObfuscationRounds", nObfuscationRounds);
             emit obfuscationRoundsChanged(nObfuscationRounds);
             break;
-        case AnonymizeLightpaycoinAmount:
-            nAnonymizeLightpaycoinAmount = value.toInt();
-            settings.setValue("nAnonymizeLightpaycoinAmount", nAnonymizeLightpaycoinAmount);
-            emit anonymizeLightpaycoinAmountChanged(nAnonymizeLightpaycoinAmount);
+        case AnonymizeLightPayCashAmount:
+            nAnonymizeLightPayCashAmount = value.toInt();
+            settings.setValue("nAnonymizeLightPayCashAmount", nAnonymizeLightPayCashAmount);
+            emit anonymizeLightPayCashAmountChanged(nAnonymizeLightPayCashAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();
